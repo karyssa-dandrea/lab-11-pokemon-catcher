@@ -9,6 +9,11 @@ export function catchPokemon(id) {
     const caughtPokemon = currentResults.find(pokemon => pokemon.id === id);
     console.log(caughtPokemon);
     caughtPokemon.picked ++;
-    console.log(caughtPokemon);
+    setResults(currentResults);
     
+}
+
+export function setResults(pokemon){
+    const stringyResults = JSON.stringify(pokemon);
+    localStorage.setItem('POKEMON', stringyResults);
 }

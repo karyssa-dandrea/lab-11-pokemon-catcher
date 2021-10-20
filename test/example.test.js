@@ -21,12 +21,12 @@ test('catchPokemon should increment the quantity if item in cart', (expect)=>{
     ];
     localStorage.setItem('POKEMON', JSON.stringify(mockResults));
     
-    const mockResults2 = [
-        { id: '1', shown: 3, picked: 1 },
-        { id: '3', shown: 5, picked: 1 }
+    const expected = [
+        { id: '1', shown: 3, picked: 2 },
+        { id: '3', shown: 5, picked: 0 }
     ];
-    catchPokemon('3');
+    catchPokemon('1');
 
     const actual = getResults();
-    expect.deepEqual(mockResults2, actual);
+    expect.deepEqual(actual, expected);
 });
