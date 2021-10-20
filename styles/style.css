@@ -1,1 +1,19 @@
 
+input[type=radio]{
+    display: none;
+}
+
+input[type=radio]:checked + img {
+    border: 5px solid #546747;
+    filter:grayscale(0%);
+    
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+     
+ }
+
+ 
