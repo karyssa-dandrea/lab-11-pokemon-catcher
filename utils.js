@@ -7,8 +7,13 @@ export function catchPokemon(id) {
     const currentResults = getResults();
     
     const caughtPokemon = currentResults.find(pokemon => pokemon.id === id);
-    console.log(caughtPokemon);
-    caughtPokemon.picked ++;
+    if (caughtPokemon){
+        caughtPokemon.picked ++;
+    } else {
+        const newPokemon = {'id': id, 'catch': 1, 'shown': 1 };
+        currentResults.push(newPokemon);
+    }
+    
     setResults(currentResults);
     
 }
