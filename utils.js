@@ -1,24 +1,38 @@
-export function getResults(){
-    const results = JSON.parse(localStorage.getItem('POKEMON') || '[]');
-    return results;
+export function getPokedex(){
+    const Pokedex = JSON.parse(localStorage.getItem('POKEMON') || '[]');
+    return Pokedex;
 }
 
 export function catchPokemon(id) {
-    const currentResults = getResults();
+    const currentPokedex = getPokedex();
     
-    const caughtPokemon = currentResults.find(pokemon => pokemon.id === id);
+    const caughtPokemon = currentPokedex.find(pokemon => pokemon.id === id);
     if (caughtPokemon){
         caughtPokemon.picked ++;
     } else {
         const newPokemon = {'id': id, 'catch': 1, 'shown': 1 };
-        currentResults.push(newPokemon);
+        currentPokedex.push(newPokemon);
     }
     
-    setResults(currentResults);
+    setPokedex(currentPokedex);
     
 }
 
-export function setResults(pokemon){
-    const stringyResults = JSON.stringify(pokemon);
-    localStorage.setItem('POKEMON', stringyResults);
+export function setPokedex(pokemon){
+    const stringyPokedex = JSON.stringify(pokemon);
+    localStorage.setItem('POKEMON', stringyPokedex);
+}
+
+export function seenPokemon(id){
+    const currentPokedex = getPokedex();
+    
+    const caughtPokemon = currentPokedex.find(pokemon => pokemon.id === id);
+    if (caughtPokemon){
+        caughtPokemon.shown ++;
+    } else {
+        const newPokemon = { 'id': id, 'catch': 0, 'shown': 1 };
+        currentPokedex.push(newPokemon);
+    }
+    
+    setPokedex(currentPokedex);
 }
