@@ -2,6 +2,38 @@
 
 ## Making a plan
 
+## HTML Elements
+- make a home page with two images as radio buttons
+-button with an id of select
+- make an empty results page
+-should have index.html and app.js
+
+## Results page
+- index.html/results
+results.js
+
+## App.js
+- generate random pokemon
+- call show pokemon for each
+- render the pokemon on the page
+
+## On page load
+- set totalPlays to 0
+- call generate Pokemon
+
+## When Button Clicks
+-increment totalPlays
+- call pickPokemon when choosing pokemon
+- redirect to results
+- else
+- call generatePokemon
+
+
+
+
+
+
+
 (bolded steps are mandatory, unbolded are for more advanced projects)
 
 1) **Make a drawing of your app. Simple "wireframes"**
