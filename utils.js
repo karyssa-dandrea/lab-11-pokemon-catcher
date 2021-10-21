@@ -10,7 +10,7 @@ export function catchPokemon(id) {
     if (caughtPokemon){
         caughtPokemon.picked ++;
     } else {
-        const newPokemon = {'id': id, 'catch': 1, 'shown': 1 };
+        const newPokemon = { 'id': id, 'catch': 1, 'shown': 1 };
         currentPokedex.push(newPokemon);
     }
     
