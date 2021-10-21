@@ -1,4 +1,4 @@
-import { pokemon } from './pokemon.js';
+import pokemon from './data/pokemon.js';
 import { catchPokemon, seenPokemon } from './utils.js';
 
 let pokemonOne = document.getElementById('pokemon-1');
