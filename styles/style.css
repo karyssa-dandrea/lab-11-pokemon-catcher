@@ -17,4 +17,25 @@ img {
      
  }
 
+ body {
+     background-color: #fddca5;
+     font-family:'Bubblegum Sans', cursive;
+     text-align: center;
+ }
  
+ button {
+     align-content: center;
+     background-color: #fab73d;
+     color: #2b331f;
+     border-radius: 60%; 
+     border: 5px solid #2b331f;
+     filter:grayscale(0%);
+     font-family:'Bubblegum Sans', cursive;
+     width: 100px;
+     height: 90px;
+     font-size: larger;
+ }
+
+ h1 {
+     color:#2b331f;
+ }

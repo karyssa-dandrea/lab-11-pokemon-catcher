@@ -6,10 +6,10 @@ const main = document.getElementById('main');
 
 for (let item of results){
     const poke = findById(item.id, pokemon);
-    console.log(item);
-    console.log(poke);
+
 
     const div = document.createElement('div');
+    div.classList.add('divv');
     const img = document.createElement('img');
     img.src = poke.url_image;
     const header = document.createElement('h2');
