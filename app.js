@@ -9,6 +9,7 @@ const charImg = document.getElementById('char-pic');
 const squirtImg = document.getElementById('squirt-pic');
 const selectButton = document.getElementById('select');
 
+
 const generatePokemon = () => {
     let randNum1 = Math.floor(Math.random() * pokemon.length);
     let randNum2 = Math.floor(Math.random() * pokemon.length);
@@ -24,15 +25,35 @@ const generatePokemon = () => {
         randNum3 = Math.floor(Math.random() * pokemon.length);
     }
 
-    pokemonOne = pokemon[randNum1];
-    bulbImg.src = pokemonOne['url_image'];
-    pokemonTwo = pokemon[randNum2];
-    charImg.src = pokemonTwo['url_image'];
-    pokemonThree = pokemon[randNum3];
-    squirtImg.src = pokemonThree['url_image']; 
-
+    const pokemon1 = pokemon[randNum1];
+    bulbImg.src = pokemon1.url_image;
+    const pokemon2 = pokemon[randNum2];
+    charImg.src = pokemon2.url_image;
+    const pokemon3 = pokemon[randNum3];
+    squirtImg.src = pokemon3.url_image; 
+    pokemonOne.value = pokemon1.id;
+    pokemonTwo.value = pokemon2.id;
+    pokemonThree.value = pokemon3.id;
+    seenPokemon(pokemon1.id);
+    seenPokemon(pokemon2.id);
+    seenPokemon(pokemon3.id);
 };
 
+let totalPlays = 0;
+generatePokemon();
+
 selectButton.addEventListener('click', () =>{
-    generatePokemon();
+    const chosenRadio = document.querySelector('input[type=radio]:checked');
+ 
+    if (chosenRadio){
+        const chosenId = Number(chosenRadio.value);
+        totalPlays++;
+        catchPokemon(chosenId);
+        if (totalPlays >= 10){
+            window.location = './results';
+        } else {
+            generatePokemon();
+        }
+    }
+
 });

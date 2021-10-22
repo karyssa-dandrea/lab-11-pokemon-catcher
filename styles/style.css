@@ -6,6 +6,7 @@ input[type=radio]{
 input[type=radio]:checked + img {
     border: 5px solid #546747;
     filter:grayscale(0%);
+    border-radius: 50%;
     
 }
 
