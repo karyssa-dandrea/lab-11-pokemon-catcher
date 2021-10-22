@@ -28,14 +28,15 @@ img {
      background-color: #fab73d;
      color: #2b331f;
      border-radius: 60%; 
-     border: 5px solid #2b331f;
+     border: 5px solid #025393;
      filter:grayscale(0%);
      font-family:'Bubblegum Sans', cursive;
      width: 100px;
      height: 90px;
      font-size: larger;
+     margin-top: 5%;
  }
 
  h1 {
-     color:#2b331f;
+     color: #025393;
  }
