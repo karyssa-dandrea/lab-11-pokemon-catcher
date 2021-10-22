@@ -16,14 +16,14 @@ test('making sure the get Pokedex function is working properly', (expect) => {
 test('catchPokemon should increment the quantity by 1', (expect)=>{
     // arrange
     const mockPokedex = [
-        { id: '1', shown: 3, picked: 1 },
-        { id: '3', shown: 5, picked: 0 }
+        { id: '1', shown: 3, catch: 1 },
+        { id: '3', shown: 5, catch: 0 }
     ];
     localStorage.setItem('POKEMON', JSON.stringify(mockPokedex));
     
     const expected = [
-        { id: '1', shown: 3, picked: 2 },
-        { id: '3', shown: 5, picked: 0 }
+        { id: '1', shown: 3, catch: 2 },
+        { id: '3', shown: 5, catch: 0 }
     ];
     catchPokemon('1');
 

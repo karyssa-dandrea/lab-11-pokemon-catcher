@@ -11,6 +11,9 @@
 ## Results page
 - index.html/results
 results.js
+- image
+- header with pokemon
+- how many times shown and picked
 
 ## App.js
 - generate random pokemon

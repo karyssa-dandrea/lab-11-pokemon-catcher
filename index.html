@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
@@ -16,24 +16,24 @@
 
 <body>
     <h1> Choose Your Pokemon</h1>
-    <section>
+    <section id="section">
         <div class ="pokes">
-        <label>
-            <input type="radio" name="item" id="bulb" value="bulb">
-            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="bulb">
+        <label class="poke-choice">
+            <input type="radio" name="item" id="pokemon-1" value="bulb">
+            <img id="bulb-pic" src="" alt="bulb">
         </label>
-        <label>
-            <input type="radio" name="item" id="char" value="char">
-            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="char">
+        <label class="poke-choice">
+            <input type="radio" name="item" id="pokemon-2" value="char">
+            <img id="char-pic" src="" alt="char">
         </label>
-        <label>
-            <input type="radio" name="item" id="squirtle" value="squirtle">
-            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="squirtle"> 
+        <label class="poke-choice">
+            <input type="radio" name="item" id="pokemon-3" value="squirtle">
+            <img id="squirt-pic" src="" alt="squirtle"> 
         </label>
-        <button id="select">Select!</button>
         </div>
-    </section>
-
+        <button id="select">Select!</button> <br>
+    </section> <br>
+    <a href="./results">Results</a>
     <script type="module" src="./app.js"></script>
 </body>
 
