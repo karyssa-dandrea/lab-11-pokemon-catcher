@@ -3,6 +3,7 @@ import { getPokedex, findById } from '../utils.js';
 
 const results = getPokedex();
 const main = document.getElementById('main');
+const playButton = document.getElementById('play-again');
 
 for (let item of results){
     const poke = findById(item.id, pokemon);
@@ -27,6 +28,12 @@ for (let item of results){
 const names = results.map((item)=>{
     const pokemonId = findById(item.id, pokemon);
     return pokemonId.pokemon;
+});
+
+
+playButton.addEventListener('click', () =>{
+    localStorage.removeItem('POKEMON');
+    window.location = '../';
 });
 
 const catchPoke = results.map(item=>item.catch);
