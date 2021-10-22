@@ -1,0 +1,19 @@
+.main-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+body {
+    font-family:'Press Start 2P', cursive;
+}
+
+h1 {
+    font-family:'Press Start 2P', cursive;
+}
+
+.chart {
+    width: 600px;
+    height: 600px;
+}
