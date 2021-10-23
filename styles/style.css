@@ -19,7 +19,7 @@ img {
 
  body {
      background-color: #fddca5;
-     font-family:'Bubblegum Sans', cursive;
+     font-family: 'Press Start 2P', cursive;
      text-align: center;
  }
  
@@ -27,15 +27,16 @@ img {
      align-content: center;
      background-color: #fab73d;
      color: #2b331f;
-     border-radius: 60%; 
-     border: 5px solid #2b331f;
+     border-radius: 5%; 
+     border: 5px solid #025393;
      filter:grayscale(0%);
-     font-family:'Bubblegum Sans', cursive;
-     width: 100px;
+     font-family:'Press Start 2P', cursive;
+     width: 150px;
      height: 90px;
-     font-size: larger;
+     margin-top: 5%;
+     margin-bottom: 5%;
  }
 
  h1 {
-     color:#2b331f;
+     color: #025393;
  }
